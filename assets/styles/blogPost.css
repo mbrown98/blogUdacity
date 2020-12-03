@@ -1,0 +1,82 @@
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  margin: 2em;
+}
+
+.blogPostContainer {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-areas:
+    "sideContent postContent"
+    "sideContent postContent"
+    "socialMedia postContent";
+}
+
+@media (max-width: 760px) {
+  .blogPostContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sideContent"
+      "postContent"
+      "socialMedia";
+  }
+}
+.socialMedia {
+  grid-area: socialMedia;
+}
+
+.sideContent {
+  grid-area: sideContent;
+  display: flex;
+  flex-direction: column;
+}
+.postContent {
+  grid-area: postContent;
+}
+
+.socialIcon {
+  margin: 0.5em;
+  font-size: 25px;
+}
+
+.title {
+  font-size: 3em;
+  margin: 0;
+}
+
+.authorName {
+  font-size: 1.5em;
+  margin: 1em 0 0 0;
+}
+
+.authorSchool {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 0.5em 0 0 0;
+}
+
+.authorSpeciality {
+  font-size: 1.1em;
+  margin: 0;
+  margin: 0.5em 0 0 0;
+}
+.homeLink {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 0.5em 0 0 0;
+}
+
+.imageContainer {
+  margin: 1em 0 0 0;
+}
+
+.blogImage {
+  height: 200px;
+  border-radius: 100px;
+}
+
+.blogText {
+  font-family: "Times New Roman", Times, serif;
+}

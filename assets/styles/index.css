@@ -1,14 +1,19 @@
+@import "header.css";
+@import "footer.css";
+@import "cardsContainer.css";
+
 body {
   font-size: 16px;
+  min-height: 100vh;
+  background-color: #f2f2f2;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /* grid-template-rows: 100px 500px 100px; */
+  grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
-    "title title title title title"
-    "sidebar blogPosts blogPosts blogPosts blogPosts"
+    "header header header header header"
+    " blogPosts blogPosts blogPosts blogPosts blogPosts"
     "footer footer footer footer footer";
   grid-gap: 10px;
 }
@@ -17,68 +22,11 @@ body {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: 100px 500px 100px; */
+
     grid-template-areas:
-      "title title title title title"
-      "sidebar sidebar sidebar sidebar sidebar"
+      "header header header header header"
       "blogPosts blogPosts blogPosts blogPosts blogPosts"
       "footer footer footer footer footer";
     grid-gap: 10px;
   }
-}
-
-.title {
-  grid-area: title;
-  background-color: aqua;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  background-color: grey;
-}
-
-.blogPosts {
-  grid-area: blogPosts;
-  background-color: blueviolet;
-  display: grid;
-  grid-template-columns: 1fr;
-
-  grid-gap: 10px;
-  grid-template-areas:
-    "topThree"
-    "otherPosts";
-}
-
-.blogPostCard {
-  background-color: white;
-  border-radius: 10px;
-  padding: 1em;
-  margin: 10px;
-}
-
-.blogPostCard:hover {
-  background-color: grey;
-}
-
-@media (min-width: 760px) {
-  .topThree {
-    grid-area: topThree;
-    background-color: brown;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .otherPosts {
-    grid-area: otherPosts;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-.footer {
-  grid-area: footer;
-  background-color: red;
-}
-
-.topStory {
-  color: red;
 }
