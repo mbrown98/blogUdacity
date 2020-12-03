@@ -8,10 +8,16 @@ body {
   background-color: #f2f2f2;
 }
 
+.navBar {
+  margin-top: 10px;
+  grid-area: navBar;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
+    ". . navBar . ."
     "header header header header header"
     " blogPosts blogPosts blogPosts blogPosts blogPosts"
     "footer footer footer footer footer";
@@ -24,6 +30,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     grid-template-areas:
+      ". . navBar . ."
       "header header header header header"
       "blogPosts blogPosts blogPosts blogPosts blogPosts"
       "footer footer footer footer footer";
